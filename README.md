@@ -22,17 +22,33 @@ main.py     → Main execution file
 
 ## 🚀 How to Run
 
-1. Install dependencies:
+1. Create and activate the virtual environment:
 
-```
-pip install -r requirements.txt
+```powershell
+python -m venv venv
+.\venv\Scripts\Activate.ps1
 ```
 
-2. Run the project:
+2. Install the runtime dependencies:
 
+```powershell
+python -m pip install streamlit langchain-openai python-dotenv tavily-python
 ```
-python main.py
+
+3. Run the project:
+
+```powershell
+streamlit run app.py
 ```
+
+PowerShell note: older Windows PowerShell versions do not support `&&`.
+Run commands one at a time, or use `;` as the separator:
+
+```powershell
+mkdir ai_agent; cd ai_agent
+```
+
+The Linux/macOS command `source venv/bin/activate` does not work in PowerShell.
 
 ## 🔐 Environment Variables
 
